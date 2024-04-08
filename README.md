@@ -1,4 +1,4 @@
-Spotify Song Rating System
+# Spotify Song Rating System
 
 This project is a web application that integrates with the Spotify API to fetch song details and allows users to log in and rate their favorite songs on a scale from 1 to 10.
 Features
@@ -8,7 +8,7 @@ Features
     Song Rating: Users can rate songs on a scale from 1 to 10, helping to build a personalized music library based on their preferences.
     User Profiles: Each user has a profile page displaying their rated songs and other account information.
 
-Getting Started
+# Getting Started
 
     Clone the repository to your local machine.
     Install the required dependencies using npm install.
@@ -16,7 +16,7 @@ Getting Started
     Start the application using npm start.
     Access the application in your browser at http://localhost:3000.
 
-Technologies Used
+# Technologies Used
 
     Node.js
     php
@@ -24,10 +24,10 @@ Technologies Used
     Spotify API
     MySQL (or your preferred database)
 
-Contributing
+# Contributing
 
 We welcome contributions from the community! If you'd like to contribute to this project, please feel free to contact me!
 
-Contact
+# Contact
 
 For any inquiries or feedback, please contact akiharatioh@gmail.com.
