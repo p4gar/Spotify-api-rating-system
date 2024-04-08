@@ -1,0 +1,56 @@
+$fadeCycle-items: 3;
+
+$fadeCycle-transition: 2s;
+
+$fadeCycle-wait: 4s;
+
+$fadeCycle-length: $fadeCycle-transition + $fadeCycle-wait;
+$fadeCycle-total: $fadeCycle-items * ($fadeCycle-transition + $fadeCycle-wait);
+
+@keyframes fadeCycle {
+0% {
+    opacity: 0;
+    z-index: 2;
+}
+
+#{percentage($fadeCycle-transition / $fadeCycle-total)} {
+    opacity: 1;
+}
+
+#{percentage(($fadeCycle-transition + $fadeCycle-length) / $fadeCycle-total)} {
+    opacity: 1;
+}
+
+#{percentage(($fadeCycle-transition + $fadeCycle-length) / $fadeCycle-total) + 1%} {
+    opacity: 0;
+    z-index: 1;
+}
+
+100% {
+    opacity: 0;
+}
+}
+
+
+%fadeCycle {
+    animation-duration: $fadeCycle-total;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: fadeCycle;
+    animation-timing-function: ease-in;
+    transition: opacity #{$fadeCycle-transition} ease-in;
+}
+
+@for $i from 1 through $fadeCycle-items {
+    .u-fadeCycle-#{$i} {
+        @extend %fadeCycle;
+        animation-delay: ($i - 1) * $fadeCycle-length;
+    }
+}
+
+
+img {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+}
