@@ -19,10 +19,10 @@ Getting Started
 Technologies Used
 
     Node.js
-    Express.js
-    React
+    php
+    JavaScript
     Spotify API
-    MongoDB (or your preferred database)
+    MySQL (or your preferred database)
 
 Contributing
 
